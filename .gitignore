@@ -6,6 +6,8 @@ HELP.md
 mvnw
 mvnw.cmd
 
+src/main/resources/initialDbPostgres
+
 ### STS ###
 .apt_generated
 .classpath
