@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 
 @Entity
-@Table(name = "role")
+@Table(name = "role_table")
 @Data
 public class Role {
 
