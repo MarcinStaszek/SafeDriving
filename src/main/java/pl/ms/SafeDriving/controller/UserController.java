@@ -26,6 +26,7 @@ public class UserController {
         ModelAndView modelAndView = new ModelAndView();
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User user = userService.findByUserEmail(auth.getName());
+        modelAndView.addObject("user",user);
         modelAndView.setViewName("dashboard");
         return modelAndView;
     }
@@ -44,13 +45,13 @@ public class UserController {
     public ModelAndView userEditForm(@Valid User user, BindingResult bindingResult){
         ModelAndView modelAndView = new ModelAndView();
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        user = userService.findByUserEmail(auth.getName());
-        user.setFirstName(user.getFirstName());
-        user.setLastName(user.getLastName());
-        user.setBirthdate(user.getBirthdate());
-        user.setAddress(user.getAddress());
-        user.setOccupation(user.getOccupation());
-        userService.saveUser(user);
+        User dbUser = userService.findByUserEmail(auth.getName());
+        dbUser.setFirstName(user.getFirstName());
+        dbUser.setLastName(user.getLastName());
+        dbUser.setBirthdate(user.getBirthdate());
+        dbUser.setAddress(user.getAddress());
+        dbUser.setOccupation(user.getOccupation());
+        userService.updateUser(dbUser);
         modelAndView.addObject("successMessage", "User has been edited successfully");
         modelAndView.setViewName("userEdit");
         return modelAndView;

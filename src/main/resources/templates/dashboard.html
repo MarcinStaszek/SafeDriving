@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 
 <title>User Dashboard</title>
 <meta charset="UTF-8">
@@ -53,7 +55,8 @@
             <!-- Profile -->
             <div class="w3-card w3-round w3-white">
                 <div class="w3-container">
-                    <h4 class="w3-center">Hello
+                    <h4 class="w3-center">Hello <span th:text="${user.firstName}"> Name </span> <span th:text="${user.lastName}"> Name </span>
+
                     </h4>
                     <p class="w3-center"><img src="/w3images/avatar3.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
                     <hr>
