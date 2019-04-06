@@ -13,13 +13,15 @@
     <button class="btn btn-md btn-warning btn-block" type="Submit">Go To User Dashboard</button>
 </form>
 
-<div class="container">
-    <div class="row">#
+<div class="container w3-center" >
+    <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <form autocomplete="off" action="#" th:action="@{edit}"
                   th:object="${user}" method="post" class="form-horizontal"
                   role="form">
                 <h2>Edit User</h2>
+
+                First name:
                 <div class="form-group">
                     <div class="col-sm-9">
                         <label th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"
@@ -28,7 +30,7 @@
                                class="form-control" />
                     </div>
                 </div>
-
+                Last name:
                 <div class="form-group">
                     <div class="col-sm-9">
                         <label	th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"
@@ -37,14 +39,16 @@
                                placeholder="Last Name" class="form-control" />
                     </div>
                 </div>
+                Birthdate:
                 <div class="form-group">
                     <div class="col-sm-9">
-                        <input type="text" th:field="*{birthdate}" placeholder="birthdate"
+                        <input type="text" th:field="*{birthdate}" placeholder="Format YYYY-MM-DD"
                                class="form-control" /> <label
                             th:if="${#fields.hasErrors('birthdate')}" th:errors="*{birthdate}"
                             class="validation-message"></label>
                     </div>
                 </div>
+                Addres:
                 <div class="form-group">
                     <div class="col-sm-9">
                         <input type="text" th:field="*{address}" placeholder="address"
@@ -53,6 +57,7 @@
                             class="validation-message"></label>
                     </div>
                 </div>
+                Occupation:
                 <div class="form-group">
                     <div class="col-sm-9">
                         <input type="text" th:field="*{occupation}" placeholder="occupation"

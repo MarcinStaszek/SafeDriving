@@ -15,25 +15,36 @@
 <!-- Navbar -->
 <div class="w3-top">
     <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
-        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-        <a href="/" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>HOME</a>
-        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe w3-margin-right"></i>News</a>
-        <a href="/registration" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Registration">Registration<i class="fa fa-user-plus w3-margin-left"></i></a>
-        <a href="/login" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Sign in">Sign in<i class="fa fa-sign-in w3-margin-left"></i></a>
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2"
+           href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+        <a href="/" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i
+                class="fa fa-home w3-margin-right"></i>HOME</a>
+        <a href="#news" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i
+                class="fa fa-globe w3-margin-right"></i>News</a>
+        <a href="#quiz" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i
+                class="fa fa-globe w3-margin-right"></i>Quiz</a>
+        <a href="#school" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i
+                class="fa fa-globe w3-margin-right"></i>School</a>
+        <a href="#forum" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i
+                class="fa fa-globe w3-margin-right"></i>Forum</a>
+        <a href="/registration" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white"
+           title="Registration">Registration<i class="fa fa-user-plus w3-margin-left"></i></a>
+        <a href="/login" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white"
+           title="Sign in">Sign in<i class="fa fa-sign-in w3-margin-left"></i></a>
     </div>
 </div>
 
 <!-- Navbar on small screens -->
 <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
+    <a href="/" class="w3-bar-item w3-button w3-padding-large">Home</a>
+    <a href="#news" class="w3-bar-item w3-button w3-padding-large">News</a>
+    <a href="/registration" class="w3-bar-item w3-button w3-padding-large">Register</a>
+    <a href="/login" class="w3-bar-item w3-button w3-padding-large">Login</a>
 </div>
 
 <div class="w3-display-container" style="margin-bottom:50px">
     <img src="/static/images/road.jpg" style="height:100vh;width:100vw"
-            th:src="@{images/road.jpg}"/>
+         th:src="@{images/road.jpg}"/>
     <div class="w3-display-bottomleft w3-container w3-amber w3-hover-orange w3-hide-small"
          style="bottom:10%;opacity:0.7;width:70%">
         <h2><b>Welcome<br>This is your first step to travelling safe</b></h2>
@@ -41,7 +52,7 @@
 </div>
 
 <div class="w3-row w3-container" style="margin:50px 0">
-    <div class="w3-half w3-container">
+    <div class="w3-half w3-container" id="news">
         <div class="w3-topbar w3-border-amber">
             <img src="/static/images/news.jpg" style="height:70vh;width:100%"
                  th:src="@{images/news.jpg}"/>
@@ -50,7 +61,7 @@
         </div>
     </div>
 
-    <div class="w3-half w3-container">
+    <div class="w3-half w3-container" id="quiz">
         <div class="w3-topbar w3-border-amber">
             <img src="/static/images/quiz.jpg" style="height:70vh;width:100%"
                  th:src="@{images/quiz.jpg}"/>
@@ -61,7 +72,7 @@
 </div>
 
 <div class="w3-row w3-container" style="margin:50px 0">
-    <div class="w3-half w3-container">
+    <div class="w3-half w3-container" id="school">
         <div class="w3-topbar w3-border-orange">
             <img src="/static/images/school.jpg" style="height:70vh;width:100%"
                  th:src="@{images/school.jpg}"/>
@@ -70,7 +81,7 @@
         </div>
     </div>
 
-    <div class="w3-half w3-container">
+    <div class="w3-half w3-container" id="forum">
         <div class="w3-topbar w3-border-orange">
             <img src="/static/images/forum.jpg" style="height:70vh;width:100%"
                  th:src="@{images/forum.jpg}"/>
