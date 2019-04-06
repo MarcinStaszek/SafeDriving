@@ -3,14 +3,20 @@ package pl.ms.SafeDriving.model;
 
 import lombok.Data;
 import org.hibernate.validator.constraints.Length;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import java.text.Format;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.Set;
 
 @Entity
-@Table(name = "users")
+@Table(name = "users_table")
 @Data
 public class User {
 
@@ -35,6 +41,14 @@ public class User {
     private String password;
 
     private boolean active;
+
+    private String address;
+
+    private String occupation;
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date birthdate;
+
 
     @ManyToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
     @JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "userId"), inverseJoinColumns = @JoinColumn(name = "roleId"))
