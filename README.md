@@ -9,6 +9,6 @@ The project is on-going.
 https://safe-driving-ms.herokuapp.com/
 
 
-You can sign in with this credentials: <br>
-<h2>Login: guest@mail.com</h2><br>
-<h2>Password: guest</h2>
+<h3> You can sign in with this credentials:</h3> <br>
+Login: guest@mail.com<br>
+Password: guest
