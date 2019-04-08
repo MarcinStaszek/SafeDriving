@@ -49,7 +49,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/user/**").hasRole("USER")
                 .antMatchers("/user/admin/**").hasRole("ADMIN")
                 .and().formLogin().defaultSuccessUrl("/user/dashboard")
-                .and().logout().logoutSuccessUrl("/logout")
+                .and().logout().logoutSuccessUrl("/perform_logout")
                 .permitAll()
                 .and().exceptionHandling().accessDeniedPage("/403");
     }

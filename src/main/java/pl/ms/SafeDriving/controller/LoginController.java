@@ -55,4 +55,11 @@ public class LoginController {
         return modelAndView;
     }
 
+    @RequestMapping(value = "/perform_logout", method = RequestMethod.GET)
+    public ModelAndView logoutSuccess(){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("logout");
+        return modelAndView;
+    }
+
 }
