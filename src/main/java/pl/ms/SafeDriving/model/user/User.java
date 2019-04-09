@@ -1,4 +1,4 @@
-package pl.ms.SafeDriving.model;
+package pl.ms.SafeDriving.model.user;
 
 
 import lombok.Data;
@@ -8,10 +8,6 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
-import java.text.Format;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.Set;
 
@@ -39,7 +35,7 @@ public class User {
     @NotBlank
     @Length(min = 5, message = "Your password must have at least 5 characters")
     private String password;
-
+    
     private boolean active;
 
     private String address;

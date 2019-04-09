@@ -3,8 +3,8 @@ package pl.ms.SafeDriving.service;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import org.springframework.stereotype.Service;
-import pl.ms.SafeDriving.model.Role;
-import pl.ms.SafeDriving.model.User;
+import pl.ms.SafeDriving.model.user.Role;
+import pl.ms.SafeDriving.model.user.User;
 import pl.ms.SafeDriving.repository.RoleRepository;
 import pl.ms.SafeDriving.repository.UserRepository;
 

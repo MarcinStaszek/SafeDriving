@@ -1,6 +1,6 @@
 package pl.ms.SafeDriving.service;
 
-import pl.ms.SafeDriving.model.User;
+import pl.ms.SafeDriving.model.user.User;
 
 public interface UserService {
 
