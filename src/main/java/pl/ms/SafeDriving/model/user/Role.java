@@ -1,4 +1,4 @@
-package pl.ms.SafeDriving.model;
+package pl.ms.SafeDriving.model.user;
 
 import lombok.Data;
 

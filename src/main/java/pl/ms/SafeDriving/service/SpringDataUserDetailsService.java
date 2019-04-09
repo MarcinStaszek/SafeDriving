@@ -6,8 +6,8 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import pl.ms.SafeDriving.model.Role;
-import pl.ms.SafeDriving.model.User;
+import pl.ms.SafeDriving.model.user.Role;
+import pl.ms.SafeDriving.model.user.User;
 
 import java.util.HashSet;
 import java.util.Set;
