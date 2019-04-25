@@ -6,7 +6,7 @@ HELP.md
 mvnw
 mvnw.cmd
 
-src/main/resources/initialDbPostgres
+src/main/resources/initialDbPostgres.txt
 
 ### STS ###
 .apt_generated
