@@ -4,6 +4,8 @@ package pl.ms.SafeDriving.model.user;
 import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.format.annotation.DateTimeFormat;
+import pl.ms.SafeDriving.model.forum.Club;
+import pl.ms.SafeDriving.model.forum.Post;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
@@ -45,9 +47,16 @@ public class User {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date birthdate;
 
-
-    @ManyToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
-    @JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "userId"), inverseJoinColumns = @JoinColumn(name = "roleId"))
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles;
+
+    @OneToMany
+    @JoinColumn(name = "reportedPost_user_id")
+    private Set<Post> reportedPost;
+
+    @ManyToOne
+    @JoinColumn(name = "club_id")
+    private Club club;
 
 }
